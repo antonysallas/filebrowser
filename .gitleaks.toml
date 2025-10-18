@@ -1,0 +1,14 @@
+# Gitleaks configuration for filebrowser repository
+# This config allowlists ACE Editor source files which contain syntax highlighting
+# definitions that trigger false positives (e.g., "token:" properties in JS objects)
+# Generated: 2025-10-18
+
+title = "Filebrowser Gitleaks Config"
+
+# Allowlist paths that are known false positives
+[[rules]]
+description = "Allowlist ACE Editor mode files (syntax highlighters)"
+[[rules.allowlist]]
+paths = [
+    '''_embed/public/ace/src/mode-.*\.js$''',
+]
